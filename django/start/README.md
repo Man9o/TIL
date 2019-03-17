@@ -12,7 +12,7 @@
 
 꼭 터미널 경로에 myvenv 폴더가 있는 위치에서 진행해야합니다.
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#088720d022c24819afe7e84d58ed98d9)
+![](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#088720d022c24819afe7e84d58ed98d9)
 
 가상환경 켜진게 확인 되나요?
 
