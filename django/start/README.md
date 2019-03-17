@@ -82,8 +82,6 @@ app은 아까 만든 프로젝트의 구성 단위입니다. app이 프로젝트
 
 [](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#c0842c3349b94daebd093858e67b8810)
 
-뭐가 이렇게 많아...
-
 hello 폴더 안에서 일단 알아야 할 파일은 views.py 입니다. 앞으로 페이지 만들기 위해서는 아래순서에 따라 작업해야한다고 외워둡시다.
 
 1. settings.py ⇒ project에게 app의 존재 알리기
