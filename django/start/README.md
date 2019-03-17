@@ -24,13 +24,13 @@
 
 `startproject` 뒤에는 만들고 싶은 파일명을 적으면 되지만 지금은 그냥 `firstsite`로 통일합니다.
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#7f6116c9d57f43ce9938a5f861693899)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Febc401c1-123f-4a48-a86b-91ec8d3c9cb6%2FUntitled.png)
 
 짠, firstsite라는 폴더가 생기고 그안에 firstsite와 manage.py라는 파일이 생겼습니다.
 
 firstsite 안에 firstsite라는 폴더가 생겼습니다. 지칭이 헷갈릴것 같으니 상위 폴더 이름을 firstsiteproject로 바꿔줍니다. 그리고 그 폴더 안으로 터미널 경로를 이동 합시다.
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#2e4aed2e99124c2a831298b14ac99497)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fad446cfe-e2fa-47b0-a557-f91329704268%2FUntitled.png)
 
 열어보면 원가 많은 파일들이 생겼습니다. 간단한 설명은 아래 해두었으니 참고하세요.
 
@@ -46,7 +46,7 @@ firstsite 안에 firstsite라는 폴더가 생겼습니다. 지칭이 헷갈릴�
 
 서버를 작동시키는 명령어를 치면 아래와 같이 동작합니다.
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#277e10d006844028bc9f3a9d4b937f80)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fde329395-da4b-43d0-9801-730fc20d898a%2FUntitled.png)
 
 오 뭔가 작동한다.
 
@@ -54,7 +54,7 @@ firstsite 안에 firstsite라는 폴더가 생겼습니다. 지칭이 헷갈릴�
 
 - 뭐죠.. 저 주소는?
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#46452254092d4736a129518817aab0e8)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd51b0067-6249-4870-8fd6-34a7738f1044%2FUntitled.png)
 
 로켓이 날라간다
 
@@ -76,11 +76,9 @@ app은 아까 만든 프로젝트의 구성 단위입니다. app이 프로젝트
 
     python manage.py startapp hello
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#d824ac69696d442ea66028fa411886df)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F74ef562b-6f50-46f1-a195-c26450445899%2FUntitled.png)
 
-억.. 안그래도 복잡한데 hello라는 폴더가 또 생겼다.
-
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#c0842c3349b94daebd093858e67b8810)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faeecbf3b-f135-4991-825d-17a027c2f224%2FUntitled.png)
 
 hello 폴더 안에서 일단 알아야 할 파일은 views.py 입니다. 앞으로 페이지 만들기 위해서는 아래순서에 따라 작업해야한다고 외워둡시다.
 
@@ -132,7 +130,7 @@ hello 라는 apps 을 구성했다고 인사하는 겁니다. `hello` 폴더 안
 
 template은 유저가 보는 화면이라 생각하면 됩니다. 웹 기본 강의에서 배웠던 html파일을 만든다고 생각하면 됩니다. 만드는 방법은 app폴더 안에 templates라는 폴더를 만들고 그 안에 html파일을 만들면 됩니다.
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#af1b7d2e395c4eb1b23610bb4ad3fd12)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F91fcc4d3-74ff-4067-8607-9a0fb0ed1d93%2FUntitled.png)
 
 왼쪽에 폴더 내용처럼 만들면 됩니다. hello라는 폴더 안에 templates라는 폴더를 만들고 그 안에 home.html을 만듭니다.
 
@@ -202,4 +200,4 @@ path는 3가지 인수를 받습니다. 제일 먼저 route라는 녀석인데, 
 
 그 결과 서버를 돌리면... Hello world가 짜잔하고 브라우저에 나타납니다.
 
-[](https://www.notion.so/26c9dc5201214f49a93bb05e0a56b62a#5cf73a124c844f078e03eaee4b532542)
+![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fdc7f7459-9cfd-42a5-8b2a-ec73006e46b6%2FUntitled.png)
