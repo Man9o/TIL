@@ -1,5 +1,56 @@
 # 파이썬 이미지 크롤링 (무신사)
 
+***
+
+## 1. 폴더에 연습해볼 파일(.py)을 생성하고 코드를 긁어온다.
+
+
+![코드 긁어오기](https://user-images.githubusercontent.com/38044331/55089058-2aaf1080-50f0-11e9-91ff-5105f73caa6f.PNG)
+
+
+## 2. 라이브러리 설치
+
+
+![requests](https://user-images.githubusercontent.com/38044331/55089091-369ad280-50f0-11e9-8c4f-02218505be30.PNG)
+
+
+![selenium](https://user-images.githubusercontent.com/38044331/55089113-3ef30d80-50f0-11e9-9ef2-7c70a0240771.PNG)
+
+
+![numpy](https://user-images.githubusercontent.com/38044331/55089129-44e8ee80-50f0-11e9-995a-e081edd0344f.PNG)
+
+
+![bs4](https://user-images.githubusercontent.com/38044331/55089153-529e7400-50f0-11e9-913b-6190a5839106.PNG)
+
+
+![beautifulsoup4](https://user-images.githubusercontent.com/38044331/55089166-57632800-50f0-11e9-97f9-0e8ea48d206d.PNG)
+
+
+## 3. 웹드라이버 경로 설정하기
+
+
+![follow2](https://user-images.githubusercontent.com/38044331/55089185-5c27dc00-50f0-11e9-9d2e-857a51f0ca3a.PNG)
+
+
+## 4. 파이썬 파일(.py)가 있는 폴더에 'top', 'outer', 'bottom' 폴더 만들어주기
+
+
+![follow3](https://user-images.githubusercontent.com/38044331/55089198-62b65380-50f0-11e9-8d38-2aac382f32c4.PNG)
+
+
+## 5. 실행(자신의 파일명으로)!
+
+
+![follow4](https://user-images.githubusercontent.com/38044331/55089217-68139e00-50f0-11e9-97fa-2b1475fad922.PNG)
+
+
+## 이미지가 크롤링 된것을 확인할 수 있다.
+
+
+![follow5](https://user-images.githubusercontent.com/38044331/55089230-6f3aac00-50f0-11e9-9b0c-437bd2d34dbf.PNG)
+
+***
+
 ```python
 import urllib.request
 from selenium import webdriver
@@ -104,41 +155,3 @@ for c,j in zip(cat,num):
         #for i,t,p,l in zip(ids,title_li,price_li,like_li):
         #    writer.writerow([i,t,p,l])
         ```
-
----
-
-# 무신사 홈페이지 이미지를 크롤링 해보기
-
-1. 폴더에 연습해볼 파일(.py)을 생성하고 코드를 긁어온다.
-
-![코드 긁어오기](https://user-images.githubusercontent.com/38044331/55089058-2aaf1080-50f0-11e9-91ff-5105f73caa6f.PNG)
-
-2. 라이브러리 설치
-
-![requests](https://user-images.githubusercontent.com/38044331/55089091-369ad280-50f0-11e9-8c4f-02218505be30.PNG)
-
-![selenium](https://user-images.githubusercontent.com/38044331/55089113-3ef30d80-50f0-11e9-9ef2-7c70a0240771.PNG)
-
-![numpy](https://user-images.githubusercontent.com/38044331/55089129-44e8ee80-50f0-11e9-995a-e081edd0344f.PNG)
-
-![bs4](https://user-images.githubusercontent.com/38044331/55089153-529e7400-50f0-11e9-913b-6190a5839106.PNG)
-
-![beautifulsoup4](https://user-images.githubusercontent.com/38044331/55089166-57632800-50f0-11e9-97f9-0e8ea48d206d.PNG)
-
-3. 웹드라이버 경로 설정하기
-
-![follow2](https://user-images.githubusercontent.com/38044331/55089185-5c27dc00-50f0-11e9-9d2e-857a51f0ca3a.PNG)
-
-4. 파이썬 파일(.py)가 있는 폴더에 'top', 'outer', 'bottom' 폴더 만들어주기
-
-![follow3](https://user-images.githubusercontent.com/38044331/55089198-62b65380-50f0-11e9-8d38-2aac382f32c4.PNG)
-
-5. 실행(자신의 파일명으로)!
-
-![follow4](https://user-images.githubusercontent.com/38044331/55089217-68139e00-50f0-11e9-97fa-2b1475fad922.PNG)
-
-이미지가 크롤링 된것을 확인할 수 있다.
-
-![follow5](https://user-images.githubusercontent.com/38044331/55089230-6f3aac00-50f0-11e9-9b0c-437bd2d34dbf.PNG)
-
-
