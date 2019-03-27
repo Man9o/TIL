@@ -109,3 +109,5 @@ for c,j in zip(cat,num):
 ##무신사 홈페이지 이미지를 크롤링 해보기
 
 1. 폴더에 연습해볼 파일(.py)을 생성하고 코드를 긁어온다.
+![코드긁어오기](https://user-images.githubusercontent.com/38044331/55086539-e883d000-50eb-11e9-9ce5-11df3f3a3269.PNG)
+
