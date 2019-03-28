@@ -202,4 +202,3 @@ for c,j in zip(cat,num):
         # writer.writerow(fieldnames)
         for i,t,p,l in zip(ids,title_li,price_li,like_li):
            writer.writerow([i,t,p,l])
-        ```
