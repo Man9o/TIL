@@ -88,6 +88,7 @@ import numpy
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--incognito")
 browser = webdriver.Chrome('C:/Users/Yechan//Desktop/chromedriver_win32/chromedriver.exe')
+# 지정해준 url을 가져올때 각 HTML요소가 나타날 때 까지 최대 1.5초까지'관용있게' 기다려준다. 
 browser.implicitly_wait(1.5)
 
 # 원하는 카테고리 설정
@@ -112,15 +113,17 @@ for c,j in zip(cat,num):
     # 셀레늄 window를 최대화 시켜서 킨다.
     browser.maximize_window()
     # 현재 저장하는 파일이 몇번째 인지 가지고 있는 변수( 파일이름 중첩 방지, ex_ 001.png 002.png )
+    # 참고로 페이지를 돌면서 idx가 0으로 초기화되기때문에 cur_num변수가 필요하다.
     cur_num = 0
         
     #  만약 사진 외에도 가격 브랜드 등을 가져오고 싶으면 주석 풀면 됨
     #  save to csv
-    #title_li=[]
-    #price_li=[]
-    #like_li=[]
-    #ids = []
+    title_li=[]
+    price_li=[]
+    like_li=[]
+    ids = []
     #  무신사는 제품들이 page화 되어 있기에 어디어디 페이지를 가져올지 지정
+    # range(4,5) = 4번째 page한개만 크롤링하겠다는 뜻.(원한다면 수정 가능)
     for page in range(4,5):
         # 화면 이동 사이즈 (스크롤)
         target = 1000;
@@ -149,36 +152,54 @@ for c,j in zip(cat,num):
         for idx,image_url in enumerate(image_urls):
             ext = image_url.split('.')[-1]
             if ext in ['jpg','png','jpeg','JPG','JPEG','PNG']:
+                # 제품이있는 index를 str(idx+1) 로 전달하면 for문을 돌면서 차례차례로 아이템들이 추출된다.
                 item = items.find_element_by_css_selector('#searchList > li:nth-child('+str(idx+1)+') > div.li_inner > div.article_info')
+                # 그 중에서도 a tag에존재하는 title(제품명)을 긇어온다.
                 title = item.find_element_by_css_selector('p.item_title > a')
                 try:
+                    # price 추출
                     price = item.find_element_by_class_name('price')
                     price=price.text.split()[-1][:-1].replace(',','')
                 except:
+                    # 만약 price가 공란일 경우에는 0값으로 에러처리
                     price = '0'
                 try:
                     like = item.find_element_by_class_name('txt_cnt_like')
+                    # 좋아요 수를 크롤링한다.
+                    # 좋아요 같은 경우에는 1,000 따위의 형식은 int(1,000)이 파이썬에서 불가능하기때문에, int(1000)으로 수정해주어야 한다.
+                    # replace를 사용하여 ,를 지워준다.('')
                     like = like.text.replace(',','')
                 except:
+                    # 만약 like가 공란일 경우에는 0값으로 에러처리
                     like = '0'
                 title=title.text
                 #  save to csv
                 #  download_img(image_url,c,cur_num+idx,ext)
+                # csv로 저장하지 않는다면, 데이터용량을줄이기 위하여 이미지 파일이름에 기타 정보값들을 넣어준다.
                 file_name=str(cur_num+idx)+'_'+title+'_'+price+'_'+like
+                title_li.append(title)
+                price_li.append(price)
+                like_li.append(like)
+                ids.append(cur_num+idx)
                 download_img(image_url,c,file_name,ext)  
             else:
                 print("error made")
+        # 현재까지 저장된 아이템의 갯수를 넣어준다.(for문을 돌면서 페이지가 전환될때 idx값이 0으로 초기화되기때문에)
         cur_num+=len(image_urls)
-        # 다음(페이지)으로 가기 버튼 클릭
+        # 다음(페이지)로 가는 버튼을 찾는다.
         button = browser.find_element_by_xpath('//*[@id="contentsItem_list"]/div[2]/div[5]/div/div/a['+str(page)+']')
+        # 다음(페이지)으로 가기 버튼 클릭
         button.send_keys(Keys.ENTER)
 
 
     #  save to csv
-    #tmp = numpy.asarray([*zip(ids,title_li,price_li,like_li)])
-    #with open('./'+c+'/'+c+'.csv', 'w', encoding='utf-16') as file:
-        #writer = csv.writer(file, delimiter=',')
+    # tmp = numpy.asarray([*zip(ids,title_li,price_li,like_li)])
+    # 파일을 열어서 저장시키기 위해서는 with구문을 사용한다.
+    # csv형식으로 'w' = write
+    # utf-16은 한글인코딩 깨짐 방지
+    with open('./'+c+'/'+c+'.csv', 'w', encoding='utf-16') as file:
+        writer = csv.writer(file, delimiter=',')
         # writer.writerow(fieldnames)
-        #for i,t,p,l in zip(ids,title_li,price_li,like_li):
-        #    writer.writerow([i,t,p,l])
+        for i,t,p,l in zip(ids,title_li,price_li,like_li):
+           writer.writerow([i,t,p,l])
         ```
