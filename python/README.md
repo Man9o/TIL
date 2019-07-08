@@ -219,3 +219,4 @@ y = np.sin(x)
 plt.plot(x, y)
 plt.show()  # 호출
 ~~~
+<img width="292" alt="image" src="https://user-images.githubusercontent.com/38044331/60781815-d7cd0680-a17e-11e9-846b-15a03e3351f4.PNG">
