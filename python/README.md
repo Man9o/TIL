@@ -223,6 +223,8 @@ plt.show()  # 호출
 
 #### pyplot의 기능
 
+sin함수와 cos함수, 제목과 각 축의 이름(레이블) 표시 등이 가능하다.
+
 ~~~python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -241,3 +243,4 @@ plt.title('sin & cos') # 제목
 plt.legend()
 plt.show()
 ~~~
+<img width="310" alt="image1" src="https://user-images.githubusercontent.com/38044331/60782262-ec120300-a180-11e9-884d-77edeebbb6a8.PNG">
